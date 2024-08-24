@@ -332,5 +332,91 @@ public class Playsounds {
             }, 280);
 
         }
+        else if (songname.contains("when")) {
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.C));
+            }, 0);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.F));
+            }, 10);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.F));
+            }, 20);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.E));
+            }, 25);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.F));
+            }, 30);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.C));
+            }, 40);
+
+
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.D));
+            }, 60);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.F));
+            }, 66);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.F));
+            }, 72);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(1, Note.Tone.A));
+            }, 78);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(1, Note.Tone.G));
+            }, 84);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.F));
+            }, 88);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(1, Note.Tone.G));
+            }, 92);
+
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.E));
+            }, 105+5);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(1, Note.Tone.G));
+            }, 110+5);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(1, Note.Tone.A));
+            }, 115+5);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(1, Note.Tone.G));
+            }, 125+5);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.F));
+            }, 130+5);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(1, Note.Tone.G));
+            }, 135+5);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(1, Note.Tone.A));
+            }, 140+5);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(1, Note.Tone.C));
+            }, 145+5);
+
+
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.D));
+            }, 155+5);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.C));
+            }, 165+5);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.D));
+            }, 170+5);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.F));
+            }, 174+5);
+            new DelayTask(() -> {
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(1, Note.Tone.G));
+                player.playNote(player.getLocation(), Instrument.PIANO, natural(0, Note.Tone.C));
+            }, 182+5);
+        }
     }
 }

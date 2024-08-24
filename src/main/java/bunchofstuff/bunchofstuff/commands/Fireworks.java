@@ -45,13 +45,16 @@ public class Fireworks implements CommandExecutor {
         }
         switch (chosen_mood) {
             case JOY:
-                Playsounds.playSong(player, "Zip");
+                Playsounds.playSong(player, "Zip"); //zip-a-dee-doo-dah
                 break;
             case ANGER:
                 Playsounds.playSong(player, "Hellfire");
                 break;
             case NOSTALGIA:
-                Playsounds.playSong(player, "Wish");
+                Playsounds.playSong(player, "Wish"); //When you wish upon a star
+                break;
+            case SADNESS:
+                Playsounds.playSong(player, "When"); //When she loved me
                 break;
         }
         createFireworkShow(player, chosen_mood, player.getTargetBlock(null,100).getLocation());

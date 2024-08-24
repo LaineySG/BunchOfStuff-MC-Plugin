@@ -15,6 +15,6 @@ commands:
     usage: /fireworks [type]
     aliases: [firework, fw]
   PlaySong:
-    description: Test a song (asc, desc, wish, zip, hellfire)
+    description: Test a song (asc, desc, wish, zip, hellfire, when)
     usage: /playsong [songname]
     aliases: [playsong, sing, song]
