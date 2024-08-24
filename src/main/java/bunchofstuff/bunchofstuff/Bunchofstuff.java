@@ -13,7 +13,7 @@ public final class Bunchofstuff extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        Bukkit.getLogger().info("Bunchofstuff is enabled");
+        Bukkit.getLogger().info("Bunchofstuff is enabled. Type /boshelp to see available options.");
         getCommand("menu").setExecutor(new Tictactoe(this));
         getCommand("boshelp").setExecutor(new BOSHelp());
         getCommand("fireworks").setExecutor(new Fireworks());
