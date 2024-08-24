@@ -1,6 +1,7 @@
 package bunchofstuff.bunchofstuff.commands;
 
 import bunchofstuff.bunchofstuff.utility.DelayTask;
+import bunchofstuff.bunchofstuff.utility.Playsounds;
 import org.bukkit.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -34,7 +35,7 @@ public class Fireworks implements CommandExecutor {
     }
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
-        playSong(player);
+        Playsounds.playSong(player, true); //true = win/happy
         Moods chosen_mood = Moods.JOY;
         if (args.length > 0) {
             for (Moods mood : Moods.values()) {
@@ -180,30 +181,11 @@ public class Fireworks implements CommandExecutor {
         int pwr = rand.nextInt(5) + 1;
         //generate firework
         Firework fw = player.getWorld().spawn(loc, Firework.class);
-        FireworkMeta fw_data = (FireworkMeta) fw.getFireworkMeta();
+        FireworkMeta fw_data = fw.getFireworkMeta();
         fw_data.addEffects(FireworkEffect.builder().withColor(chosencolor1, chosencolor2)
                 .with(fw_effect).withFlicker().withTrail().build());
         fw_data.setPower(pwr);
         fw.setFireworkMeta(fw_data);
     }
-    public void playSong(Player player) {
-        new DelayTask(() -> {
-            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_FLUTE, 1f, .5f);
-        }, 10);
-        new DelayTask(() -> {
-            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_FLUTE, 1f, .6f);
-        }, 12);
-        new DelayTask(() -> {
-            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_FLUTE, 1f, .7f);
-        }, 14);
-        new DelayTask(() -> {
-            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_FLUTE, 1f, .8f);
-        }, 16);
-        new DelayTask(() -> {
-            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_FLUTE, 1f, .9f);
-        }, 18);
-        new DelayTask(() -> {
-            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_FLUTE, 1f, 1f);
-        }, 20);
-    }
+
 }

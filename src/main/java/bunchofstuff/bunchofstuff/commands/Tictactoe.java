@@ -1,6 +1,7 @@
 package bunchofstuff.bunchofstuff.commands;
 
 import bunchofstuff.bunchofstuff.Bunchofstuff;
+import bunchofstuff.bunchofstuff.utility.Playsounds;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -144,11 +145,13 @@ public class Tictactoe implements CommandExecutor, Listener {
 //                menu.clear();
 //                player.closeInventory();
                 player.sendMessage(ChatColor.DARK_RED + "You lost!");
+                Playsounds.playSong(player, false); //true = win/happy
                 return true;
             } else if (out == Outcome.RED) {
 //                menu.clear();
 //                player.closeInventory();
                 player.sendMessage(ChatColor.DARK_GREEN + "You won!");
+                Playsounds.playSong(player, true); //true = win/happy
                 return true;
             }
         }
