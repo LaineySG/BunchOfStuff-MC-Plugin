@@ -145,13 +145,13 @@ public class Tictactoe implements CommandExecutor, Listener {
 //                menu.clear();
 //                player.closeInventory();
                 player.sendMessage(ChatColor.DARK_RED + "You lost!");
-                Playsounds.playSong(player, false); //true = win/happy
+                Playsounds.playSong(player, "desc"); //true = win/happy
                 return true;
             } else if (out == Outcome.RED) {
 //                menu.clear();
 //                player.closeInventory();
                 player.sendMessage(ChatColor.DARK_GREEN + "You won!");
-                Playsounds.playSong(player, true); //true = win/happy
+                Playsounds.playSong(player, "asc"); //true = win/happy
                 return true;
             }
         }

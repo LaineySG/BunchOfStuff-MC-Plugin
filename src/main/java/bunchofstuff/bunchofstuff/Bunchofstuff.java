@@ -3,6 +3,7 @@ package bunchofstuff.bunchofstuff;
 
 import bunchofstuff.bunchofstuff.commands.BOSHelp;
 import bunchofstuff.bunchofstuff.commands.Fireworks;
+import bunchofstuff.bunchofstuff.commands.PlaySong;
 import bunchofstuff.bunchofstuff.commands.Tictactoe;
 import bunchofstuff.bunchofstuff.utility.DelayTask;
 import org.bukkit.Bukkit;
@@ -17,6 +18,7 @@ public final class Bunchofstuff extends JavaPlugin {
         getCommand("menu").setExecutor(new Tictactoe(this));
         getCommand("boshelp").setExecutor(new BOSHelp());
         getCommand("fireworks").setExecutor(new Fireworks());
+        getCommand("playsong").setExecutor(new PlaySong());
         new DelayTask(this);
     }
 

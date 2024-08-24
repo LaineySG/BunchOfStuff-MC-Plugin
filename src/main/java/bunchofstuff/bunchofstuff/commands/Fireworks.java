@@ -35,7 +35,6 @@ public class Fireworks implements CommandExecutor {
     }
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
-        Playsounds.playSong(player, true); //true = win/happy
         Moods chosen_mood = Moods.JOY;
         if (args.length > 0) {
             for (Moods mood : Moods.values()) {
@@ -43,6 +42,17 @@ public class Fireworks implements CommandExecutor {
                     chosen_mood = mood;
                 }
             }
+        }
+        switch (chosen_mood) {
+            case JOY:
+                Playsounds.playSong(player, "Zip");
+                break;
+            case ANGER:
+                Playsounds.playSong(player, "Hellfire");
+                break;
+            case NOSTALGIA:
+                Playsounds.playSong(player, "Wish");
+                break;
         }
         createFireworkShow(player, chosen_mood, player.getTargetBlock(null,100).getLocation());
         return true;
@@ -58,7 +68,7 @@ public class Fireworks implements CommandExecutor {
                 colors.add(Color.ORANGE);
                 colors.add(Color.BLUE);
                 speed = Speeds.FAST;
-                fw_count = rand.nextInt(25) + 5;
+                fw_count = rand.nextInt(75) + 5;
                 break;
             case SADNESS:
                 colors.add(Color.BLUE);
@@ -66,34 +76,34 @@ public class Fireworks implements CommandExecutor {
                 colors.add(Color.AQUA);
                 colors.add(Color.BLACK);
                 speed = Speeds.SLOW;
-                fw_count = rand.nextInt(7) + 2;
+                fw_count = rand.nextInt(35) + 2;
                 break;
             case FEAR:
                 colors.add(Color.PURPLE);
                 colors.add(Color.FUCHSIA);
                 speed = Speeds.HYPER;
-                fw_count = rand.nextInt(14) + 10;
+                fw_count = rand.nextInt(35) + 10;
                 break;
             case DISGUST:
                 colors.add(Color.GREEN);
                 colors.add(Color.LIME);
                 colors.add(Color.OLIVE);
                 speed = Speeds.MED;
-                fw_count = rand.nextInt(10) + 4;
+                fw_count = rand.nextInt(40) + 4;
                 break;
             case ANXIETY:
                 colors.add(Color.ORANGE);
                 colors.add(Color.YELLOW);
                 colors.add(Color.WHITE);
                 speed = Speeds.HYPER;
-                fw_count = rand.nextInt(45) + 15;
+                fw_count = rand.nextInt(120) + 15;
                 break;
             case ENVY:
                 colors.add(Color.TEAL);
                 colors.add(Color.AQUA);
                 colors.add(Color.PURPLE);
                 speed = Speeds.MED;
-                fw_count = rand.nextInt(12) + 4;
+                fw_count = rand.nextInt(65) + 4;
                 break;
             case EMBARRASSMENT:
                 colors.add(Color.FUCHSIA);
@@ -101,14 +111,14 @@ public class Fireworks implements CommandExecutor {
                 colors.add(Color.PURPLE);
                 colors.add(Color.RED);
                 speed = Speeds.SLOW;
-                fw_count = rand.nextInt(4) + 2;
+                fw_count = rand.nextInt(10) + 5;
                 break;
             case ENNUI:
                 colors.add(Color.NAVY);
                 colors.add(Color.BLUE);
                 colors.add(Color.PURPLE);
                 speed = Speeds.SLOW;
-                fw_count = rand.nextInt(12) + 4;
+                fw_count = rand.nextInt(15) + 4;
                 break;
             case NOSTALGIA:
                 colors.add(Color.BLACK);
@@ -116,14 +126,14 @@ public class Fireworks implements CommandExecutor {
                 colors.add(Color.GRAY);
                 colors.add(Color.SILVER);
                 speed = Speeds.SLOW;
-                fw_count = rand.nextInt(12) + 8;
+                fw_count = rand.nextInt(25) + 8;
                 break;
             case ANGER:
                 colors.add(Color.RED);
                 colors.add(Color.MAROON);
                 colors.add(Color.BLACK);
                 speed = Speeds.HYPER;
-                fw_count = rand.nextInt(22) + 6;
+                fw_count = rand.nextInt(85) + 6;
                 break;
         }
         for (int i = 0; i <= fw_count; i++) { //for each firework

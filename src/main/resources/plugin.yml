@@ -14,3 +14,7 @@ commands:
     description: Sets off custom fireworks! valid types include joy, sadness, fear, anger, disgust, anxiety, envy, embarrassment, nostalgia, ennui
     usage: /fireworks [type]
     aliases: [firework, fw]
+  PlaySong:
+    description: Test a song (asc, desc, wish, zip, hellfire)
+    usage: /playsong [songname]
+    aliases: [playsong, sing, song]
