@@ -1,0 +1,16 @@
+name: Bunchofstuff
+version: '${project.version}'
+main: bunchofstuff.bunchofstuff.Bunchofstuff
+commands:
+  Menu:
+    description: Opens tic tac toe menu
+    usage: /tictactoe
+    aliases: [tic,game]
+  BOSHelp:
+    description: opens help menu for 'bunch of stuff' plugin.
+    usage: /boshelp
+    aliases: [helpbos,bos]
+  Fireworks:
+    description: Sets off custom fireworks! valid types include joy, sadness, fear, anger, disgust, anxiety, envy, embarrassment, nostalgia, ennui
+    usage: /fireworks [type]
+    aliases: [firework, fw]
