@@ -56,6 +56,25 @@ public class Fireworks implements CommandExecutor {
             case SADNESS:
                 Playsounds.playSong(player, "When"); //When she loved me
                 break;
+            case FEAR:
+                Playsounds.playSong(player, "Go"); //Let it go
+                break;
+            case ANXIETY:
+                Playsounds.playSong(player, "Unknown"); //Into the unknown
+                break;
+            case ENVY:
+                Playsounds.playSong(player, "World"); //Part of your world
+                break;
+            case ENNUI:
+                Playsounds.playSong(player, "Bare"); //The bare necessities
+                break;
+            case EMBARRASSMENT:
+                Playsounds.playSong(player, "Wont"); //I won't say (I'm in love)
+                break;
+            case DISGUST:
+                Playsounds.playSong(player, "Spoonful"); //Spoonful of sugar
+                break;
+
         }
         createFireworkShow(player, chosen_mood, player.getTargetBlock(null,100).getLocation());
         return true;
